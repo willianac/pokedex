@@ -1,4 +1,28 @@
 nav {
     height: 68px;
     background-color: #2b88c8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 {
+    color : #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    line-height: 68px;
+    letter-spacing: 4px;
+}
+
+.active-nav-link {
+    color : #ffffff;
+    text-decoration: inherit;
+    margin-right: 22px;
+    font-size: 18px;
+}
+
+.nav-link {
+    color : #e7d6df;
+    text-decoration: inherit;
+    margin-right: 22px;
+    font-size: 18px;
 }
