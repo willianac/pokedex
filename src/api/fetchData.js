@@ -10,16 +10,26 @@ const gqlQuery = `query {
     }
   }`;
 
+  const gqlQueryPokemons = `query {
+    getAllPokemon(offset: 87, take: 229) {
+      key
+      sprite
+      types {
+        name
+      }
+    }
+  }`;
+
 function fetchData(url) {
     const promise = fetch(url, {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          query : gqlQuery
+          query : gqlQueryPokemons
         }),
         method: 'POST',
         })
         .then((res) => res.json())
-        .then((res) => res.data.getPokemon)
+        .then((res) => res.data.getAllPokemon)
     return wrapPromise(promise)
 }
 

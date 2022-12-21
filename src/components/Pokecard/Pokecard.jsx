@@ -1,6 +1,9 @@
 import "./Pokecard.css"
+import { setColorType } from "../../common/setColorType"
 
 export default function Pokecard({ data }) {
+    const type = data.types
+    
     return (
         <div className="card-conteiner">
             <div className="poke-card">
@@ -16,8 +19,9 @@ export default function Pokecard({ data }) {
                 </div>
                 <div className="lower-card">
                     <span>
-                        <h3>{data.types[0].name}</h3>
-                        <h3>{data.types[1]?.name}</h3>
+                        <h3 className={setColorType(type[0].name)}>{type[0].name}</h3>
+                        {type[1] && <h1>.</h1>}
+                        {type[1] && <h3 className={setColorType(type[1].name)}>{type[1]?.name}</h3>}
                     </span>
                 </div>
             </div>

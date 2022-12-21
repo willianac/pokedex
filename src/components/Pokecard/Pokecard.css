@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+
 .card-conteiner {
     display: flex;
     justify-content: center;
@@ -12,6 +14,7 @@
     border: 5px solid #64656b;
     border-radius: 15px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 
 .upper-card {
@@ -33,7 +36,8 @@
 .upper-card > div > img {
     display : block;
     margin: auto;
-    height: 64px;
+    max-height: 64px;
+    max-width: 64px;
 }
 
 .mid-card {
@@ -44,6 +48,11 @@
     background-color: #f3eae8;
 }
 
+.mid-card h3 {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .lower-card {
     width: 100%;
     background-color: #f3eae8;
@@ -52,3 +61,71 @@
     border-radius: 0px 0px 10px 10px;
 }
 
+.lower-card > span {
+    display : flex;
+    justify-content: space-around;
+    line-height: 32px;
+}
+
+.lower-card h3 {
+    font-family: Raleway;
+    font-weight: 400;
+}
+
+.lower-card h1 {
+    position: relative;
+    bottom: 8px;
+}
+
+.poke-card:hover {
+    transform: scale(1.1);
+}
+
+.type-color-fire {
+    color : red
+}
+.type-color-water {
+    color : blue
+}
+.type-color-grass {
+    color : green
+}
+.type-color-poison {
+    color : purple
+}
+.type-color-flying {
+    color :#5ca5e0
+}
+.type-color-bug {
+    color: #b97d5d;
+}
+.type-color-electric {
+    color : #99df3e
+}
+.type-color-normal {
+    color : #ecd3c6
+}
+.type-color-ground {
+    color : #02b360
+}
+.type-color-fighting {
+    color : #b64f18
+}
+.type-color-psychic {
+    color : #df10cd
+}
+.type-color-rock {
+    color : #2f9781
+}
+.type-color-ice {
+    color : #77d3f8
+}
+.type-color-dragon {
+    color : #e455e4
+}
+.type-color-dark {
+    color : #303030
+}
+.type-color-default {
+    color : white
+}
