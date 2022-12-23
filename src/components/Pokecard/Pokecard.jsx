@@ -9,7 +9,7 @@ export default function Pokecard({ data }) {
             <div className="poke-card">
                 <div className="upper-card">
                     <div className="img-wrapper">
-                        <img src={data.sprite} alt="pokemon ivysaur"></img>
+                        <img src={data.sprite} alt={`pokemon ${data.key}`}></img>
                     </div>
                 </div>
                 <div className="mid-card">

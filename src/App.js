@@ -12,7 +12,7 @@ function App() {
         <Route 
           path='/' 
           element={(
-          <Suspense fallback={<h1>Loading...</h1>}> 
+          <Suspense fallback={<h1 style={{color : 'white'}}>Loading...</h1>}> 
             <Home />
           </Suspense>
           )} 

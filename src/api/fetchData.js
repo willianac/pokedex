@@ -20,11 +20,11 @@ const gqlQuery = `query {
     }
   }`;
 
-function fetchData(url) {
+function fetchData(url, query) {
     const promise = fetch(url, {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          query : gqlQueryPokemons
+          query : query
         }),
         method: 'POST',
         })

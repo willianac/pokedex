@@ -5,6 +5,7 @@ function Navigation() {
     return (
         <nav>
             <div className="nav-logo">
+                <img src="./pokeball.png" alt="one pokeball"/>
                 <h1>Pokedex</h1>
             </div>
             <div className="nav-links">
