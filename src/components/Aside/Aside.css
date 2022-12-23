@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+
+.aside-conteiner {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    background-color: #fbe5f6;
+    overflow-x: hidden;
+    margin-top: 68px;
+    transition: all 0.3s;
+}
+
+.aside-conteiner:hover {
+    width: 150px;
+    text-align: center;
+}
+
+.aside-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside-list > a {
+    margin-top: 100px;
+    text-decoration: inherit;
+    font-family: Raleway;
+    font-weight: 400;
+    color :black;
+    width: 100%;
+    padding: 20px 0px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.aside-list > a:hover {
+    background-color: #1f2842;
+    color: #ffffff;
+}
