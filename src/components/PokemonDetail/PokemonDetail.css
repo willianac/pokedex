@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+
+.poke-conteiner {
+    margin : auto;
+    display: flex;
+    position: relative;
+    top : 10em;
+    width : 50%;
+    border: 2px solid gray;
+}
+
+.left-conteiner {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3eae8;
+    padding: 18px;
+}
+
+.left-conteiner > h2 {
+    text-transform: capitalize;
+    margin-bottom: 9px;
+}
+
+.img-conteiner {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+img {
+    max-width: 16em;
+    max-height: 16em;
+    border-right: 1px solid rgb(207, 207, 207);
+}
+
+.types-conteiner {
+    display : flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.types-conteiner > span {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 19px;
+    color : #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+    min-width: 64px;
+    text-align: center;
+}
+
+.right-conteiner {
+    background-color: #f3eae8;
+    flex-grow: 1;
+    padding : 18px 4em;
+}
+
+.stats-conteiner {
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.stats-conteiner > h2 {
+    color : #273b45;
+    font-size: 26px;
+}
+
+.stats-list {
+    max-width: fit-content;
+    margin-bottom: 12px;  
+}
+
+.stats-list > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.stats-list > div > span {
+    color : #273b45;
+    font-weight: 500;
+}
+
+.gender-conteiner {
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.gender-conteiner > h2{
+    color : #273b45;
+    font-size: 26px;
+}
+
+.genders {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 12px;   
+}
+
+.genders > div > span {
+    font-weight: 500;
+}
+
+.ability-conteiner > h2{
+    color : #273b45;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.ability-conteiner > h4{
+    color : #273b45;
+    margin-bottom: 5px;
+}
+
+.ability-conteiner > p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+.bg-type-color-fire {
+    background-color : red
+}
+.bg-type-color-water {
+    background-color : blue
+}
+.bg-type-color-grass {
+    background-color : green
+}
+.bg-type-color-poison {
+    background-color : purple
+}
+.bg-type-color-flying {
+    background-color :#5ca5e0
+}
+.bg-type-color-bug {
+    background-color: #b97d5d;
+}
+.bg-type-color-electric {
+    background-color : #99df3e
+}
+.bg-type-color-normal {
+    background-color : #ecd3c6
+}
+.bg-type-color-ground {
+    background-color : #02b360
+}
+.bg-type-color-fighting {
+    background-color : #b64f18
+}
+.bg-type-color-psychic {
+    background-color : #df10cd
+}
+.bg-type-color-rock {
+    background-color : #2f9781
+}
+.bg-type-color-ice {
+    background-color : #77d3f8
+}
+.bg-type-color-dragon {
+    background-color : #e455e4
+}
+.bg-type-color-dark {
+    background-color : #303030
+}
+.bg-type-color-default {
+    background-color : white
+}
