@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import fetchData from "../../api/fetchData.js";
-import Aside from "../../components/Aside/Aside.js";
+import Aside from "../../components/Aside/Aside.jsx";
 import Pokecard from "../../components/Pokecard/Pokecard.jsx";
 import "./Home.css"
+
 const gqlQueryPokemons = `query {
-    getAllPokemon(offset: 87, take: 229) {
+    getAllPokemon(offset: 88, take: 232) {
       key
       sprite
       types {
@@ -13,11 +14,12 @@ const gqlQueryPokemons = `query {
     }
   }`;
 
-let resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryPokemons)
 
-function Home() {
+  const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryPokemons)
+  
+  function Home() {
     let detail = resource.read()
-    const [listPoke,setListPoke] = useState(detail)
+    const [listPoke,setListPoke] = useState(detail.getAllPokemon)
 
     const test = (gen) => {
         switch (gen) {
@@ -38,15 +40,6 @@ function Home() {
                 break;
         }
     }
-
-    // const [teste, setTeste] = useState()
-    // useEffect(() => {
-    //     setTeste(detail.slice(0, 16))
-    // },[detail])
-
-    // useEffect(() => {
-    //     console.log(teste)
-    // },[teste])
 
     return ( 
         <>
