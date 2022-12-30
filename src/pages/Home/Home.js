@@ -24,16 +24,16 @@ const gqlQueryPokemons = `query {
     const test = (gen) => {
         switch (gen) {
             case 1:
-                setListPoke(detail.slice(0, 16))
+                setListPoke(detail.getAllPokemon.slice(0, 16))
                 break;
             case 2:
-                setListPoke(detail.slice(16, 30))
+                setListPoke(detail.getAllPokemon.slice(16, 30))
                 break;
             case 3:
-                setListPoke(detail.slice(30, 42))
+                setListPoke(detail.getAllPokemon.slice(30, 42))
                 break;
             case 4:
-                setListPoke(detail.slice(42, 52))
+                setListPoke(detail.getAllPokemon.slice(42, 52))
                 break;
             default:
                 setListPoke(detail)

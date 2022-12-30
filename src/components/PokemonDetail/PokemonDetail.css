@@ -27,10 +27,10 @@
     border-radius: 50%;
 }
 
-img {
+.img-conteiner > img {
     max-width: 16em;
     max-height: 16em;
-    border-right: 1px solid rgb(207, 207, 207);
+    /* border-right: 1px solid rgb(207, 207, 207); */
 }
 
 .types-conteiner {

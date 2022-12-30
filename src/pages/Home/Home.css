@@ -8,3 +8,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 7em;
 }
+
+@media screen and (max-width: 1000px) {
+    .conteiner {
+        width: 70%;
+    }
+
+    .grid-conteiner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
