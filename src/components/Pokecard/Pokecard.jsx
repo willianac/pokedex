@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 export default function Pokecard({ data }) {
     const type = data.types
     const navigate = useNavigate()
+
     return (
             <div className="card-conteiner">
                 <div className="poke-card" onClick={() => navigate(`/pokemon/${data.key}`)}>
