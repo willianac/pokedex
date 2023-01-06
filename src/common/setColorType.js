@@ -45,7 +45,16 @@ export const setColorType = (arrayIndex) => {
             break
         case 'Dark':
             typeColor = 'type-color-dark'
-            break    
+            break
+        case 'Ghost':
+            typeColor = 'type-color-ghost'
+            break
+        case 'Steel':
+            typeColor = 'type-color-steel'
+            break
+        case 'Fairy':
+            typeColor = 'type-color-fairy'
+            break
         default:
             typeColor = 'type-color-default'
             break

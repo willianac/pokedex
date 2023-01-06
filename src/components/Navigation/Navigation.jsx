@@ -1,8 +1,9 @@
 import { useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navigation.css"
 
 function Navigation() {
+    const navigate = useNavigate()
     let refe = useRef()
     const slideMenu = (e) => {
         let visibility = refe.current.getAttribute('data-hidden')
@@ -12,12 +13,12 @@ function Navigation() {
     }
     return (
         <nav>
-            <div className="nav-logo">
-                <img src="./assets/pokeball.png" alt="one pokeball"/>
+            <div className="nav-logo" onClick={() => navigate('/')}>
+                <img src="/assets/pokeball.png" alt="one pokeball"/>
                 <h1>Pokedex</h1>
             </div>
             <NavLink className="responsive-menu" onClick={(e) => slideMenu(e)}> 
-                <img src="./assets/transparent-nav-menu.png" alt="navmenu icon"/> 
+                <img src="/assets/transparent-nav-menu.png" alt="navmenu icon"/> 
             </NavLink>
             <div className="nav-links" data-hidden="true" ref={refe}>
                 <NavLink end to="/" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Pokedex</NavLink>

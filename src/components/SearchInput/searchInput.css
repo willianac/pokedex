@@ -1,0 +1,29 @@
+.search-bar {
+    width: 22rem;
+    display : block;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    top : 100px;
+    background-color: #1f2842;
+    border: 1px solid #ffffff;
+}
+
+.search-field {
+    background-color: #1f2842;
+    width: 88%;
+    height: 38px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font: normal 18px Helvetica;
+    text-indent: 20px;
+}
+
+.search-bar > img {
+    width: 24px;
+    position: relative;
+    top: 6px;
+    left: 6px;
+}

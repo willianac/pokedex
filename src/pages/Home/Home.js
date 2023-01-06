@@ -1,49 +1,50 @@
 import { useState } from "react";
+
 import fetchData from "../../api/fetchData.js";
+import genFilterFetch from "../../api/genFilterFetch.js";
 import Aside from "../../components/Aside/Aside.jsx";
 import Pokecard from "../../components/Pokecard/Pokecard.jsx";
+import SearchInput from "../../components/SearchInput/searchInput.jsx";
+
+import { gqlQueryFirstGen } from "../../api/queries.js";
+import { gqlQuerySecondGen } from "../../api/queries.js"
+import { gqlQueryThirdGen } from "../../api/queries.js";
+import { gqlQueryFourthGen } from "../../api/queries.js";
 import "./Home.css"
 
-const gqlQueryPokemons = `query {
-    getAllPokemon(offset: 88, take: 232) {
-      key
-      sprite
-      types {
-        name
-      }
-    }
-  }`;
-
-
-  const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryPokemons)
+const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
   
-  function Home() {
+function Home() {
     let detail = resource.read()
     const [listPoke,setListPoke] = useState(detail.getAllPokemon)
 
-    const test = (gen) => {
+    const switchPokemonGen = async (gen) => {
         switch (gen) {
             case 1:
-                setListPoke(detail.getAllPokemon.slice(0, 16))
+                const gen1 = await genFilterFetch('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
+                setListPoke(gen1.getAllPokemon)
                 break;
             case 2:
-                setListPoke(detail.getAllPokemon.slice(16, 30))
+                const gen2 = await genFilterFetch('https://graphqlpokemon.favware.tech/v7', gqlQuerySecondGen)
+                setListPoke(gen2.getAllPokemon)
                 break;
             case 3:
-                setListPoke(detail.getAllPokemon.slice(30, 42))
+                const gen3 = await genFilterFetch('https://graphqlpokemon.favware.tech/v7', gqlQueryThirdGen)
+                setListPoke(gen3.getAllPokemon)
                 break;
             case 4:
-                setListPoke(detail.getAllPokemon.slice(42, 52))
+                const gen4 = await genFilterFetch('https://graphqlpokemon.favware.tech/v7', gqlQueryFourthGen)
+                setListPoke(gen4.getAllPokemon)
                 break;
             default:
                 setListPoke(detail)
                 break;
         }
     }
-
     return ( 
         <>
-            <Aside change={test}/>
+            <SearchInput />
+            <Aside change={switchPokemonGen}/>
             <section className="conteiner">
                 <div className="grid-conteiner">
                     {listPoke.map((pokemon) =>(
