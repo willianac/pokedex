@@ -116,21 +116,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .type-color-fire {
     color : red
 }
@@ -153,7 +138,7 @@
     color : #99df3e
 }
 .type-color-normal {
-    color : #ecd3c6
+    color : #cfad9a
 }
 .type-color-ground {
     color : #02b360
@@ -175,6 +160,15 @@
 }
 .type-color-dark {
     color : #303030
+}
+.type-color-ghost {
+    color : #7833a5
+}
+.type-color-steel {
+    color : #ae96b4
+}
+.type-color-fairy {
+    color : #e4b6ce
 }
 .type-color-default {
     color : white

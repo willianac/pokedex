@@ -37,7 +37,7 @@ function Pokemon() {
   }`;
 
   const gqlQueryArtwork = `query {
-    pokemons(offset : 0, limit : 151) {
+    pokemons(offset : 0, limit : 493) {
       results {
         name
         artwork
@@ -73,6 +73,7 @@ function Pokemon() {
         method : 'POST'
       })
       const data = await response.json()
+      console.log(data)
       setPokemonArtwork(data.data.pokemons.results)
     }
     fetchArtworks()
