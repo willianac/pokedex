@@ -17,7 +17,7 @@ const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryFir
 function Home() {
     let detail = resource.read()
     const [listPoke,setListPoke] = useState(detail.getAllPokemon)
-
+    const [searchField, setSearchField] = useState('')
     const switchPokemonGen = async (gen) => {
         switch (gen) {
             case 1:
@@ -41,13 +41,20 @@ function Home() {
                 break;
         }
     }
+    const handleChange = (event) => {
+        setSearchField(event.target.value)
+    }
+
+    const filteredArray = listPoke.filter(pokemon => (
+        pokemon.key.includes(searchField.toLowerCase())
+    ))
     return ( 
         <>
-            <SearchInput />
+            <SearchInput searchChange={handleChange}/>
             <Aside change={switchPokemonGen}/>
             <section className="conteiner">
                 <div className="grid-conteiner">
-                    {listPoke.map((pokemon) =>(
+                    {filteredArray.map((pokemon) =>(
                         <Pokecard data={pokemon} key={pokemon.key}/>
                     ))}
                 </div>
