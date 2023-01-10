@@ -17,7 +17,7 @@ export default function Aside({ change }) {
         <>
             
             <aside className="aside-conteiner" data-occult="false" ref={ref}>
-                <h3>Filter By:</h3>
+                
                 <ul className="aside-list">
                     <Link onClick={() => changeGen(1)}>Generation 1</Link>
                     <Link onClick={() => changeGen(2)}>Generation 2</Link>
