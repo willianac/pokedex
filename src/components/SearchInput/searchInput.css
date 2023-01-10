@@ -28,14 +28,20 @@
     left: 6px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 992px)  {
     .search-bar {
         width: 85%;
     }
     .search-field {
-        width: 88%;
+        width: 93%;
     }
     .search-bar > img {
         left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-field {
+        width: 88%;
     }
 }
