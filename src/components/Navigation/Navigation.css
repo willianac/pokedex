@@ -61,8 +61,14 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
+    nav {
+        justify-content: space-between;
+    }
+
     .nav-logo {
-        margin-left: 10px;
+        position: relative;
+        left: 60px;
+        bottom: 4px;
     }
     
     .nav-logo > img {  
@@ -101,8 +107,5 @@ nav {
         top: 1rem;
         right: 1rem;
         z-index: 9999;
-    }
-    nav {
-        justify-content: space-between;
     }
 }

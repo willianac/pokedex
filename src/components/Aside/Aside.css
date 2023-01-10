@@ -26,6 +26,7 @@
 
 .aside-list > a { 
     text-decoration: inherit;
+    text-align: center;
     font-family: Raleway;
     font-weight: 700;
     color :black;
@@ -41,7 +42,7 @@
 
 .responsive-filter-menu {
     display: none;
-    z-index: 999;
+    z-index: 99;
 }
 
 @media (max-width: 768px) {
@@ -53,26 +54,17 @@
         justify-content: space-between;
     }
 
-    .aside-list {
-        height: 70%;
-    }
-
     .responsive-filter-menu {
         display: inline-block;
-        position: relative;
-        top: 4rem;
+        position: fixed;
+        top: 1rem;
         left: 1rem;
     }
 
     .aside-conteiner[data-occult="true"] {
         transform: translateX(0%);
         width: 95%;
-        z-index: 99;
-    }
-
-    .aside-conteiner[data-occult="true"] + .responsive-filter-menu   {
-        position: fixed;
-        margin-top: 50px;
+        z-index: 9;
     }
 
     .aside-conteiner > h3 {
@@ -80,8 +72,4 @@
         top: 26px;
         left: 56px;
     }
-
-    .aside-list > a {
-        width: auto;
-    } 
 }

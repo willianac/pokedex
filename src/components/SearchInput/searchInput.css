@@ -30,10 +30,10 @@
 
 @media (max-width: 768px) {
     .search-bar {
-        width: 14rem;
+        width: 85%;
     }
     .search-field {
-        width: 86%;
+        width: 88%;
     }
     .search-bar > img {
         left: 0;

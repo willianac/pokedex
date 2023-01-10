@@ -1,12 +1,11 @@
 .conteiner {
     width: 60%;
-    margin: auto;
+    margin: 8rem auto 0 auto;
 }
 
 .grid-conteiner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 7em;
 }
 
 @media screen and (max-width: 1000px) {
