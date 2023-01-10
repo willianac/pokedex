@@ -5,7 +5,7 @@ import "./Navigation.css"
 function Navigation() {
     const navigate = useNavigate()
     let refe = useRef()
-    const slideMenu = (e) => {
+    const slideMenu = () => {
         let visibility = refe.current.getAttribute('data-hidden')
         if(visibility === 'false') refe.current.setAttribute('data-hidden', true)
         if(visibility === 'true') {refe.current.setAttribute('data-hidden', false)}
@@ -20,7 +20,7 @@ function Navigation() {
             <NavLink className="responsive-menu" onClick={(e) => slideMenu(e)}> 
                 <img src="/assets/transparent-nav-menu.png" alt="navmenu icon"/> 
             </NavLink>
-            <div className="nav-links" data-hidden="true" ref={refe}>
+            <div className="nav-links" data-hidden="false" ref={refe}>
                 <NavLink end to="/" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Pokedex</NavLink>
                 <NavLink to="/test" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Jogos</NavLink>
                 <NavLink to="/ops" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Videos</NavLink>

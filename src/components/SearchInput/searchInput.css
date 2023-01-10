@@ -27,3 +27,15 @@
     top: 6px;
     left: 6px;
 }
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 14rem;
+    }
+    .search-field {
+        width: 86%;
+    }
+    .search-bar > img {
+        left: 0;
+    }
+}
