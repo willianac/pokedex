@@ -13,7 +13,6 @@ export default function PokemonDetail({ data, artwork }) {
         <>
             <button className="btn-arrow-back" onClick={() => navigate(-1)}>
                 <img src="/assets/arrow.png" alt="arrow back" />
-                
             </button>
             <main className="poke-conteiner">
                 <div className="left-conteiner">

@@ -6,6 +6,7 @@ nav {
     justify-content: space-around;
     position: fixed;
     z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .nav-logo {
@@ -60,7 +61,8 @@ nav {
     margin: auto;
 }
 
-@media screen and (max-width: 1000px) {
+/* Tablets and below */
+@media screen and (max-width: 992px) {
     nav {
         justify-content: space-between;
     }
