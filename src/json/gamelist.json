@@ -1,0 +1,74 @@
+[
+    {
+        "id" : 1,
+        "title" : "Pokemon Red & Blue",
+        "image" : "https://upload.wikimedia.org/wikipedia/pt/5/57/Pok%C3%A9mon_RB_cover.png",
+        "region" : "Kanto",
+        "launch" : 1996,
+        "text" : "Pokémon Red Version and Pokémon Blue Version are 1996 role-playing video games developed by Game Freak and published by Nintendo for the Game Boy. They are the first installments of the Pokémon video game series. They were first released in Japan in 1996 as Pocket Monsters: Red and Pocket Monsters: Green, with the special edition Pocket Monsters: Blue being released in Japan later that same year."
+    },
+    {
+        "id" : 2,
+        "title" : "Pokemon Gold & Silver",
+        "image" : "https://i.discogs.com/zdO0jwnOFilsOsj_Klhm8wDmXKZyibCe7beu4U_3i94/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1MTky/NjktMTY1NDM1MzEz/My05NjIxLmpwZWc.jpeg",
+        "region" : "Johto",
+        "launch" : 1999,
+        "text" : "Pokémon Gold Version and Pokémon Silver Version are 1999 role-playing video games developed by Game Freak and published by Nintendo for the Game Boy Color. They are the first installments in the second generation of the Pokémon video game series. They were released in Japan in 1999, Australia and North America in 2000, and Europe in 2001. Pokémon Crystal, a third version, was released a year later in each region."
+    },
+    {
+        "id" : 3,
+        "title" : "Pokemon Ruby & Sapphire",
+        "image" : "https://upload.wikimedia.org/wikipedia/en/b/be/PokemonRubySapphireBox.jpg",
+        "region" : "Hoenn",
+        "launch" : 2002,
+        "text" : "Pokémon Ruby Version and Pokémon Sapphire Version are 2002 role-playing video games developed by Game Freak, published by The Pokémon Company and Nintendo for the Game Boy Advance. They are the first installments in the third generation of the Pokémon video game series, also known as the 'advanced generation'. After years of Nintendo being the sole publisher of the franchise in all regions, The Pokémon Company co-published the games for the first time since the establishment of the joint-owned company in 1998."
+    },
+    {
+        "id" : 4,
+        "title" : "Pokemon Fire Red & Leaf Green",
+        "image" : "https://m.media-amazon.com/images/I/613YYZ14XVL.jpg",
+        "region" : "Kanto",
+        "launch" : 2004,
+        "text" : "Pokémon FireRed Version and Pokémon LeafGreen Version are 2004 remakes of the 1996 Game Boy role-playing video games Pokémon Red and Blue. They were developed by Game Freak, published by The Pokémon Company and Nintendo for the Game Boy Advance. FireRed and LeafGreen were first released in Japan in January 2004 and in North America and Europe in September and October 2004 respectively."
+    },
+    {
+        "id" : 5,
+        "title" : "Pokemon Diamond & Pearl",
+        "image" : "https://upload.wikimedia.org/wikipedia/pt/a/a2/Pok%C3%A9mon_Diamond_and_Pearl_covers.png",
+        "region" : "Sinnoh",
+        "launch" : 2006,
+        "text" : "Pokémon Diamond Version and Pokémon Pearl Version are the first installments in the fourth generation of the Pokémon video game series. They were first released in Japan on 28 September 2006. Pokémon Platinum, a third version, was released two years later in each region. Remakes titled Pokémon Brilliant Diamond and Shining Pearl were released for the Nintendo Switch on 19 November 2021. A prequel, Pokémon Legends: Arceus, was released for the Switch on 28 January 2022."
+    },
+    {
+        "id" : 6,
+        "title" : "Pokemon Platinum",
+        "image" : "https://upload.wikimedia.org/wikipedia/pt/8/8d/Pok%C3%A9mon_Platinum_cover.png",
+        "region" : "Sinnoh",
+        "launch" : 2008,
+        "text" : "Pokémon Platinum Version is a 2008 role-playing video game developed by Game Freak, published by The Pokémon Company and Nintendo for the Nintendo DS handheld game console. It is the third version after Pokémon Diamond and Pearl and is part of the fourth generation of the Pokémon video game series."
+    },
+    {
+        "id" : 7,
+        "title" : "Pokemon HeartGold & SoulSilver",
+        "image" : "https://upload.wikimedia.org/wikipedia/pt/4/49/Pok%C3%A9mon_HeartGold_e_SoulSilver_covers.png",
+        "region" : "Johto",
+        "launch" : 2009,
+        "text" : "Pokémon HeartGold Version and Pokémon SoulSilver Version are 2009 remakes of the 1999 Game Boy Color role-playing video games Pokémon Gold and Silver. The games are part of the fourth generation of the Pokémon video game series and were developed by Game Freak and published by The Pokémon Company. In commemoration of the 10th anniversary of Gold and Silver, the games were released in Japan on September 12, 2009, and were later released in other regions during March 2010."
+    },
+    {
+        "id" : 8,
+        "title" : "Pokemon Black & White",
+        "image" : "https://upload.wikimedia.org/wikipedia/pt/b/b4/Pok%C3%A9mon_Black_and_White_covers.png",
+        "region" : "Unova",
+        "launch" : 2010,
+        "text" : "Pokémon Black Version and Pokémon White Version are role-playing video games developed by Game Freak and published by The Pokémon Company. They are the first installments in the fifth generation of the Pokémon video game series. Upon their release, Black and White received positive reviews, with praise for the advancements in gameplay. Reviewers, however, were divided on some of the Pokémon designs, and some critics felt that the games did not innovate as much as expected"
+    },
+    {
+        "id" : 9,
+        "title" : "Pokemon X & Y",
+        "image" : "https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Pok%C3%A9mon_XY_cover.png/220px-Pok%C3%A9mon_XY_cover.png",
+        "region" : "Kalos",
+        "launch" : 2013,
+        "text" : "Pokémon X and Pokémon Y are role-playing video games developed by Game Freak, published by The Pokémon Company and Nintendo for the Nintendo 3DS. They are the first installments in the sixth generation of the main Pokémon video game series. X and Y received positive reviews from critics, who praised the advancements in the gameplay and innovations that the developers brought to the franchise. The games' visuals and transition to 3D models were well received by critics, though the games' story, characters and linearity received criticism."
+    }
+]

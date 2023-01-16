@@ -3,11 +3,12 @@
 
 .card {
     display: flex;
+    align-items: center;
     background-color: #ffffff;
     box-shadow: 0 8px 16px rgb(0 0 0 / 45%);
 }
 
-.test {
+.top-dash {
     display: block;
     width: 50px;
     height: 5px;
@@ -15,18 +16,18 @@
     margin-bottom: 8px;
 }
 
-.card-img > img {
-    float: left;
-    height: 280px;
+.card > img {
+    max-height: 450px;
     width: 280px;
 }
 
 .card-texts {
-    padding: 10px 52px;
+    padding: 10px 0px 10px 52px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 18px;
+    max-width: 522px;
 }
 
 .card-texts > div {
@@ -35,12 +36,16 @@
     gap: 10px;
 }
 
+.card-texts > span {
+    font-weight: 600;
+}
+
 .card-texts > div > h1 {
     font-family: 'Questrial', sans-serif;
     font-size: 36px;
 }
 
-.card-texts > div > span {
+.card-texts > div > h1 > span {
     font-size: 32px;
     color: #565163;
 }
@@ -48,4 +53,14 @@
 .card-texts > p {
     font-family: 'Questrial', sans-serif;
     line-height: 24px;
+}
+
+@media screen and (max-width: 992px) {
+   
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        flex-direction: column;
+    }
 }
