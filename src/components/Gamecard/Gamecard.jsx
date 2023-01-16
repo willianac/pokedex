@@ -1,18 +1,22 @@
 import "./Gamecard.css"
 
-export default function Gamecard() {
+export default function Gamecard({ 
+    title,
+    image,
+    region,
+    launch,
+    text
+ }) {
     return (
         <div className="card">
-            <div className="card-img">
-                <img src="https://m.media-amazon.com/images/I/61XjZ8DvaFL.jpg" alt="pokemon fire red cd"/>
-            </div>
+            <img src={image} alt="pokemon fire red cd"/>
             <div className="card-texts">
-            <div className="test"></div>
+                <div className="top-dash"></div>
                 <div>
-                    <h1>Pokemon Fire Red</h1>
-                    <span>(Kanto)</span>
+                    <h1> {title} <span>({region})</span>  </h1>
                 </div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                <span>Release year: {launch}</span>
+                <p>{text}</p>
             </div>
         </div>
     )

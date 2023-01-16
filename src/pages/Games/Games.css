@@ -5,3 +5,19 @@
     position: relative;
     top: 9rem;
 }
+
+.games-conteiner > div {
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1220px) {
+    .games-conteiner {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .games-conteiner {
+        width: 100%;
+    }
+}
