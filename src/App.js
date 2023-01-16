@@ -4,6 +4,7 @@ import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home/Home';
 import Pokemon from './pages/Pokemon/Pokemon';
+import Games from './pages/Games/Games';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </Suspense>
           )}
         />
+        <Route path='/allgames' element={<Games />}/>
       </Routes>
     </>
   )
