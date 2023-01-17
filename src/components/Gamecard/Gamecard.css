@@ -63,4 +63,13 @@
     .card {
         flex-direction: column;
     }
+
+    .card-texts {
+        padding: 30px 28px;
+    }
+
+    .top-dash {
+        width: 220px;
+        height: 10px;
+    }
 }

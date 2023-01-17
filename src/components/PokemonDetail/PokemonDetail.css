@@ -148,7 +148,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .poke-conteiner {
         top: 7em;
     }
@@ -158,6 +158,10 @@
     .img-conteiner > img {
         max-width: 12em;
         max-height: 12em;
+    }
+
+    .right-conteiner {
+        padding: 18px 1em;
     }
 
     .btn-arrow-back {
