@@ -18,6 +18,7 @@
 
 @media screen and (max-width: 767px) {
     .games-conteiner {
+        top: 72px;
         width: 100%;
     }
 }
