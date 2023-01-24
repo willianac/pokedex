@@ -1,6 +1,5 @@
 import "./searchInput.css"
 
-
 export default function SearchInput({ searchChange }) {
     return (
         <div className="search-bar">

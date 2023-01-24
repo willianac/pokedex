@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home/Home';
 import Pokemon from './pages/Pokemon/Pokemon';

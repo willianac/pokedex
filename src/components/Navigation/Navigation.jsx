@@ -9,7 +9,6 @@ function Navigation() {
         let visibility = refe.current.getAttribute('data-hidden')
         if(visibility === 'false') refe.current.setAttribute('data-hidden', true)
         if(visibility === 'true') {refe.current.setAttribute('data-hidden', false)}
-        
     }
     return (
         <nav>

@@ -41,12 +41,15 @@ export default async function fetchPokemon(params) {
       }),
       method : 'POST'
     })
-    const moves = await movesResponse.json()
-    let moveList = await moves.data.pokemon.moves.map((move) => {
-      return move.move.name
-    })
+    const moves = await movesResponse.json();
 
-    
+    let moveList;
+    if(moves.data.pokemon.moves) {
+      moveList = await moves.data.pokemon.moves.map((move) => {
+        return move.move.name
+      })
+    }
+
     const dataResponse = await fetch('https://graphqlpokemon.favware.tech/v7', {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
