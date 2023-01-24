@@ -14,6 +14,7 @@ function Pokemon() {
   useEffect(() => {
     const pokemon = async () => {
       const pokeInfo = await fetchPokemon(params)
+      console.log(pokeInfo)
       setPokemon(pokeInfo)
     }
     pokemon()
