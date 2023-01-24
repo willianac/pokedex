@@ -4,7 +4,6 @@ import PokemonDetail from "../../components/PokemonDetail/PokemonDetail.jsx";
 import fetchPokemon from "../../api/fetchPokemonInfo.js";
 import fetchArtworks from "../../api/fetchPokemonArtwork.js";
 
-
 function Pokemon() {
   const [pokemon,setPokemon] = useState({})
   const [pokemonArtwork, setPokemonArtwork] = useState([])
@@ -14,7 +13,6 @@ function Pokemon() {
   useEffect(() => {
     const pokemon = async () => {
       const pokeInfo = await fetchPokemon(params)
-      console.log(pokeInfo)
       setPokemon(pokeInfo)
     }
     pokemon()

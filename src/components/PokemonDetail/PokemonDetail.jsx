@@ -2,8 +2,6 @@ import "./PokemonDetail.css"
 import { setColorType } from "../../common/setColorType"
 import { useNavigate } from "react-router-dom"
 
-
-
 export default function PokemonDetail({ data, artwork }) {
     const type = data.types
     const image = artwork.find(art => data.key === art.name)
@@ -14,8 +12,7 @@ export default function PokemonDetail({ data, artwork }) {
             <button className="btn-arrow-back" onClick={() => navigate(-1)}>
                 <img src="/assets/arrow.png" alt="arrow back" />
             </button>
-            <main className="poke-conteiner">
-               
+            <main className="poke-conteiner">  
                 <div className="left-conteiner">
                     <div className="img-conteiner">
                         <img src={image?.artwork} alt={`the pokemon ${data.key}`}/>
@@ -26,7 +23,6 @@ export default function PokemonDetail({ data, artwork }) {
                         {type[1] && <span className={`bg-${setColorType(type[1].name)}`}>{type[1].name}</span>}
                     </div>
                 </div>
-    
                 <div className="right-conteiner">
                     <div className="stats-conteiner">
                         <h2>Base stats</h2>
@@ -55,11 +51,18 @@ export default function PokemonDetail({ data, artwork }) {
                         <h4>{data.abilities.first.name}</h4>
                         <p>{data.abilities.first.desc}</p>
                     </div>
-                    <div className="moves-conteiner">
-                        {data.moveList.map((move) => (
-                            <span>{move}</span>
-                        ))}
-                    </div>
+                    {data.moveList &&
+                        <div className="moves-conteiner">
+                            <h2>Moves</h2>
+                            <div className="moves">
+                                {data.moveList.map((move, index) => (
+                                    <a href={`https://pokemondb.net/move/${move}`} key={index}>
+                                        {move}
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    }
                 </div>
             </main>
         </>
