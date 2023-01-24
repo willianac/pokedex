@@ -115,6 +115,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.moves-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
 .btn-arrow-back {
     position: relative;
     top: 8rem;
@@ -170,7 +176,7 @@
     }
 
     .btn-arrow-back > img {
-        width: 22px
+        width: 22px;
     }
 }
 

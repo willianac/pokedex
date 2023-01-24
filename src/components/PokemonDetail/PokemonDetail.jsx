@@ -15,6 +15,7 @@ export default function PokemonDetail({ data, artwork }) {
                 <img src="/assets/arrow.png" alt="arrow back" />
             </button>
             <main className="poke-conteiner">
+               
                 <div className="left-conteiner">
                     <div className="img-conteiner">
                         <img src={image?.artwork} alt={`the pokemon ${data.key}`}/>
@@ -25,6 +26,7 @@ export default function PokemonDetail({ data, artwork }) {
                         {type[1] && <span className={`bg-${setColorType(type[1].name)}`}>{type[1].name}</span>}
                     </div>
                 </div>
+    
                 <div className="right-conteiner">
                     <div className="stats-conteiner">
                         <h2>Base stats</h2>
@@ -52,6 +54,11 @@ export default function PokemonDetail({ data, artwork }) {
                         <h2>Ability</h2>
                         <h4>{data.abilities.first.name}</h4>
                         <p>{data.abilities.first.desc}</p>
+                    </div>
+                    <div className="moves-conteiner">
+                        {data.moveList.map((move) => (
+                            <span>{move}</span>
+                        ))}
                     </div>
                 </div>
             </main>

@@ -1,37 +1,62 @@
 export default async function fetchPokemon(params) {
-    const gqlQuery = `query {
-        getPokemon(pokemon: ${params.key}) {
-          key
-          types {
+    const gqlQueryData = `query {
+      getPokemon(pokemon: ${params.key}) {
+        key
+        types {
+          name
+        }
+        baseStats {
+          attack
+          defense
+          hp
+          speed
+        }
+        abilities {
+          first {
             name
-          }
-          baseStats {
-            attack
-            defense
-            hp
-            speed
-          }
-          abilities {
-            first {
-              name
-              desc
-            }
-          }
-          gender {
-            male
-            female
+            desc
           }
         }
-      }`;
+        gender {
+          male
+          female
+        }
+      }
+    }`;
 
+    const gqlQueryMoves = `query {
+      pokemon(name: "${params.key}") {
+        moves {
+          move {
+            name
+          }
+        }
+      }
+    }`
 
-    const response = await fetch('https://graphqlpokemon.favware.tech/v7', {
+    const movesResponse = await fetch('https://graphql-pokeapi.vercel.app/api/graphql', {
+      headers : { 'Content-Type': 'application/json' },
+      body : JSON.stringify({
+        query : gqlQueryMoves
+      }),
+      method : 'POST'
+    })
+    const moves = await movesResponse.json()
+    let moveList = await moves.data.pokemon.moves.map((move) => {
+      return move.move.name
+    })
+
+    
+    const dataResponse = await fetch('https://graphqlpokemon.favware.tech/v7', {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        query : gqlQuery
+        query : gqlQueryData
       }),
       method: 'POST',
     })
-    const data = await response.json()
-    return data.data.getPokemon
+    const data = await dataResponse.json()
+
+    return {
+      ...data.data.getPokemon, moveList
+    }
 }
