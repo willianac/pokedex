@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 
 import fetchData from "../../api/fetchData.js";
 import genFilterFetch from "../../api/genFilterFetch.js";
@@ -11,15 +11,20 @@ import { gqlQuerySecondGen } from "../../api/queries.js"
 import { gqlQueryThirdGen } from "../../api/queries.js";
 import { gqlQueryFourthGen } from "../../api/queries.js";
 import "./Home.css"
+import { PokemonListContext } from "../../common/context/Pokemons.js";
 
 const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
   
 function Home() {
     let detail = resource.read()
-    const [listPoke,setListPoke] = useState(detail.getAllPokemon)
-    const [searchField, setSearchField] = useState('')
-    
-    const switchPokemonGen = useCallback(async (gen) => {
+    const {listPoke, setListPoke, searchField, setSearchField} = useContext(PokemonListContext)
+
+    useEffect(() => {
+        setListPoke(detail.getAllPokemon)
+        console.log('changing')
+    }, [setListPoke, detail.getAllPokemon])
+   
+    const switchPokemonGen = async (gen) => {
         switch (gen) {
             case 1:
                 const gen1 = await genFilterFetch('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
@@ -41,14 +46,15 @@ function Home() {
                 setListPoke(detail.getAllPokemon)
                 break;
         }
-    }, [setListPoke, detail])
-
+    }
     const handleChange = (event) => {
         setSearchField(event.target.value)
     }
     const filteredArray = listPoke.filter(pokemon => (
         pokemon.key.includes(searchField.toLowerCase())
     ))
+    
+    
     return ( 
         <>
             <SearchInput searchChange={handleChange}/>
