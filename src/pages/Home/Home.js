@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 import fetchData from "../../api/fetchData.js";
 import genFilterFetch from "../../api/genFilterFetch.js";
@@ -18,7 +18,8 @@ function Home() {
     let detail = resource.read()
     const [listPoke,setListPoke] = useState(detail.getAllPokemon)
     const [searchField, setSearchField] = useState('')
-    const switchPokemonGen = async (gen) => {
+    
+    const switchPokemonGen = useCallback(async (gen) => {
         switch (gen) {
             case 1:
                 const gen1 = await genFilterFetch('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
@@ -37,14 +38,14 @@ function Home() {
                 setListPoke(gen4.getAllPokemon)
                 break;
             default:
-                setListPoke(detail)
+                setListPoke(detail.getAllPokemon)
                 break;
         }
-    }
+    }, [setListPoke, detail])
+
     const handleChange = (event) => {
         setSearchField(event.target.value)
     }
-
     const filteredArray = listPoke.filter(pokemon => (
         pokemon.key.includes(searchField.toLowerCase())
     ))
