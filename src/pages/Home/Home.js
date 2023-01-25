@@ -43,15 +43,13 @@ function Home() {
                 setListPoke(gen4.getAllPokemon)
                 break;
             default:
-                setListPoke(detail)
+                setListPoke(detail.getAllPokemon)
                 break;
         }
     }
-   
     const handleChange = (event) => {
         setSearchField(event.target.value)
     }
-
     const filteredArray = listPoke.filter(pokemon => (
         pokemon.key.includes(searchField.toLowerCase())
     ))
