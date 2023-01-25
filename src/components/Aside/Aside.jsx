@@ -1,8 +1,8 @@
 import { useRef } from "react"
 import { Link } from "react-router-dom"
 import "./Aside.css"
-const NUMBER_GENERATION = 4
-const arrayOfLinks = Array.from(Array(NUMBER_GENERATION).keys())
+const NUMBER_OF_GENERATIONS = 4
+const arrayOfLinks = Array.from(Array(NUMBER_OF_GENERATIONS).keys())
 
 
 export default function Aside({ change }) {
