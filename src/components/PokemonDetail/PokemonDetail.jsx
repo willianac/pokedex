@@ -2,7 +2,7 @@ import "./PokemonDetail.css"
 import { setColorType } from "../../common/setColorType"
 import { useNavigate } from "react-router-dom"
 
-export default function PokemonDetail({ data, artwork }) {
+export default function PokemonDetail({ data, artwork, openModal }) {
     const type = data.types
     const image = artwork.find(art => data.key === art.name)
     const navigate = useNavigate()
@@ -21,6 +21,9 @@ export default function PokemonDetail({ data, artwork }) {
                     <div className="types-conteiner">
                         <span className={`bg-${setColorType(type[0].name)}`}>{type[0].name}</span>
                         {type[1] && <span className={`bg-${setColorType(type[1].name)}`}>{type[1].name}</span>}
+                    </div>
+                    <div className="catch-button">
+                        <button onClick={openModal}>CATCH!</button>
                     </div>
                 </div>
                 <div className="right-conteiner">

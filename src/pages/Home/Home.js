@@ -1,17 +1,17 @@
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useContext, useEffect} from "react";
 
 import fetchData from "../../api/fetchData.js";
 import genFilterFetch from "../../api/genFilterFetch.js";
 import Aside from "../../components/Aside/Aside.jsx";
 import Pokecard from "../../components/Pokecard/Pokecard.jsx";
 import SearchInput from "../../components/SearchInput/searchInput.jsx";
+import { PokemonListContext } from "../../common/context/Pokemons.js";
 
 import { gqlQueryFirstGen } from "../../api/queries.js";
 import { gqlQuerySecondGen } from "../../api/queries.js"
 import { gqlQueryThirdGen } from "../../api/queries.js";
 import { gqlQueryFourthGen } from "../../api/queries.js";
 import "./Home.css"
-import { PokemonListContext } from "../../common/context/Pokemons.js";
 
 const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
   
@@ -21,7 +21,6 @@ function Home() {
 
     useEffect(() => {
         setListPoke(detail.getAllPokemon)
-        console.log('changing')
     }, [setListPoke, detail.getAllPokemon])
    
     const switchPokemonGen = async (gen) => {
@@ -53,7 +52,6 @@ function Home() {
     const filteredArray = listPoke.filter(pokemon => (
         pokemon.key.includes(searchField.toLowerCase())
     ))
-    
     
     return ( 
         <>
