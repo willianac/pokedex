@@ -10,6 +10,7 @@ function fetchData(url, query) {
         })
         .then((res) => res.json())
         .then((res) => res.data)
+        .catch((error) => console.log('failed to fetch'))
     return wrapPromise(promise)
 }
 
