@@ -7,7 +7,7 @@ function catchPokemon() {
         const percentage = generateRandom()
         console.log(percentage)
         setTimeout(() => {
-            if(percentage >= 60) {
+            if(percentage >= 30) {
                 resolve(true)
             } 
             reject(false)
