@@ -5,12 +5,16 @@ import Modal from "../../components/Modal/Modal.jsx";
 import fetchPokemon from "../../api/fetchPokemonInfo.js";
 import fetchArtworks from "../../api/fetchPokemonArtwork.js";
 import catchPokemon from "../../api/catchPokemonPromise.js";
+import { useCallback } from "react";
+
+import { useMyPokemonsContext } from "../../common/context/MyPokemons.js";
 
 function Pokemon() {
   const [pokemon,setPokemon] = useState({})
   const [pokemonArtwork, setPokemonArtwork] = useState([])
   const [isModalVisible, setModalVisibility] = useState(false)
   const [isPokemonCaptured, setCapturedPokemon] = useState(false)
+  const {addPokemonToList} = useMyPokemonsContext()
   const params = useParams()
 
   //fetching information about pokemons
@@ -31,26 +35,31 @@ function Pokemon() {
     artworks()
   }, [])
 
-  const handleModal = () => {
+  const handleModal = useCallback(() => {
     setModalVisibility((visibility) => visibility = !visibility)
-  }
+  }, []) 
 
   useEffect(() => {
-    if(isModalVisible) {
+    if(isModalVisible && !isPokemonCaptured) {
       catchPokemon()
         .then((data) => {
+          addPokemonToList(params)
           setCapturedPokemon(true)
+          handleModal()
         })
-        .catch((error) => alert("You'll get next time"))
+        .catch((error) => {
+          alert("The pokemon ran away ")
+          handleModal()
+        })
     }
-  }, [isModalVisible])
+  }, [isModalVisible, addPokemonToList, params, isPokemonCaptured, handleModal])
 
   if(!pokemon.key) {return <h1>LOADING...</h1>}
   
   return (
       <>
         <PokemonDetail data={pokemon} artwork={pokemonArtwork} openModal={handleModal}/>
-        <Modal visible={isModalVisible} handle={handleModal} captured={isPokemonCaptured}/>
+        <Modal visible={isModalVisible} handle={handleModal} captured={isPokemonCaptured} setCapturedPokemon={setCapturedPokemon}/>
       </>
   )
 }

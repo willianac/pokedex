@@ -1,11 +1,16 @@
 import "./PokemonDetail.css"
 import { setColorType } from "../../common/setColorType"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
+import { useMyPokemonsContext } from "../../common/context/MyPokemons"
+import { useMemo } from "react"
 
 export default function PokemonDetail({ data, artwork, openModal }) {
     const type = data.types
     const image = artwork.find(art => data.key === art.name)
     const navigate = useNavigate()
+    const params = useParams()
+    const {myPokemons} = useMyPokemonsContext()
+    const isAlreadyCaptured = useMemo(() => myPokemons.some((pokemon) => (pokemon.key === params.key)), [myPokemons, params])
 
     return (
         <>
@@ -22,9 +27,11 @@ export default function PokemonDetail({ data, artwork, openModal }) {
                         <span className={`bg-${setColorType(type[0].name)}`}>{type[0].name}</span>
                         {type[1] && <span className={`bg-${setColorType(type[1].name)}`}>{type[1].name}</span>}
                     </div>
-                    <div className="catch-button">
-                        <button onClick={openModal}>CATCH!</button>
-                    </div>
+                    {!isAlreadyCaptured && 
+                        <div className="catch-button">
+                            <button onClick={openModal}>CATCH!</button>
+                        </div>
+                    }
                 </div>
                 <div className="right-conteiner">
                     <div className="stats-conteiner">

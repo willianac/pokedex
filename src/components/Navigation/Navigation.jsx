@@ -22,7 +22,7 @@ function Navigation() {
             <div className="nav-links" data-hidden="false" ref={refe}>
                 <NavLink end to="/" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Pokedex</NavLink>
                 <NavLink to="/allgames" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Jogos</NavLink>
-                <NavLink to="/ops" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Videos</NavLink>
+                <NavLink to="/mypokemons" className={({ isActive }) => isActive ? "active-nav-link" : 'nav-link'}>Meus Pokemons</NavLink>
             </div>
         </nav>
     )

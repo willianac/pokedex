@@ -1,4 +1,4 @@
-import { useContext, useEffect} from "react";
+import { useCallback, useContext, useEffect} from "react";
 
 import fetchData from "../../api/fetchData.js";
 import genFilterFetch from "../../api/genFilterFetch.js";
@@ -14,15 +14,19 @@ import { gqlQueryFourthGen } from "../../api/queries.js";
 import "./Home.css"
 
 const resource = fetchData('https://graphqlpokemon.favware.tech/v7', gqlQueryFirstGen)
-  
+
 function Home() {
     let detail = resource.read()
     const {listPoke, setListPoke, searchField, setSearchField} = useContext(PokemonListContext)
+    
+    const reinserirPokemons = useCallback(() => {
+        setListPoke(detail.getAllPokemon)
+    }, [detail.getAllPokemon, setListPoke])
 
     useEffect(() => {
-        setListPoke(detail.getAllPokemon)
-    }, [setListPoke, detail.getAllPokemon])
-   
+        reinserirPokemons()
+    }, [detail, reinserirPokemons])
+
     const switchPokemonGen = async (gen) => {
         switch (gen) {
             case 1:

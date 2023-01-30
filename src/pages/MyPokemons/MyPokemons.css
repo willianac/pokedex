@@ -1,0 +1,6 @@
+.my-pokemons-container {
+    position: relative;
+    top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
