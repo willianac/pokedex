@@ -30,7 +30,6 @@
 .img-conteiner > img {
     max-width: 16em;
     max-height: 16em;
-    /* border-right: 1px solid rgb(207, 207, 207); */
 }
 
 .types-conteiner {
@@ -64,7 +63,6 @@
     border: 3px solid #000000;
     box-shadow: 0 0 0 3px #ffffff,
                 0 0 0 6px #000000;
-    
     background-color: #ff565b;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -287,4 +285,7 @@
 }
 .bg-type-color-default {
     background-color : white
+}
+.bg-type-color-steel {
+    background-color: #75637a;
 }

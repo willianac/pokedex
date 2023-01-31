@@ -4,7 +4,6 @@ import "./Aside.css"
 const NUMBER_OF_GENERATIONS = 4
 const arrayOfLinks = Array.from(Array(NUMBER_OF_GENERATIONS).keys())
 
-
 export default function Aside({ change }) {
     const ref = useRef()
     const changeGen = (gen) => {

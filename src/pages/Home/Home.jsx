@@ -19,13 +19,13 @@ function Home() {
     let detail = resource.read()
     const {listPoke, setListPoke, searchField, setSearchField} = useContext(PokemonListContext)
     
-    const reinserirPokemons = useCallback(() => {
+    const insertPokemons = useCallback(() => {
         setListPoke(detail.getAllPokemon)
     }, [detail.getAllPokemon, setListPoke])
 
     useEffect(() => {
-        reinserirPokemons()
-    }, [detail, reinserirPokemons])
+        insertPokemons()
+    }, [detail, insertPokemons])
 
     const switchPokemonGen = async (gen) => {
         switch (gen) {
