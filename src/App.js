@@ -33,9 +33,9 @@ function App() {
               )}
             />
             <Route path='/mypokemons' element={<MyPokemons />} />
+            <Route path='/allgames' element={<Games />} />
           </Route>
         </Route>
-        <Route path='/allgames' element={<Games />} />
       </Routes>
     </>
   )

@@ -4,3 +4,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.my-pokes-warning {
+    position: relative;
+    top: 6rem;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    animation: scale 1s ease-in-out 0s infinite alternate;
+}
+
+@keyframes scale {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+
+@media screen and (max-width: 767px) {
+    .my-pokes-warning {
+        font-size: 20px;
+    }
+}

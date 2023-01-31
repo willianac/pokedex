@@ -48,7 +48,7 @@ function Pokemon() {
           handleModal()
         })
         .catch((error) => {
-          alert("The pokemon ran away ")
+          alert("Pokemon ran away")
           handleModal()
         })
     }
